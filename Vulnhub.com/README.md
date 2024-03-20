@@ -40,19 +40,25 @@ Nmap done: 1 IP address (1 host up) scanned in 6.43 seconds
 - Click on the target tab
 - Then open the browser and access the website by entering `##targetIp:targetPort` or `10.0.2.7:80` for me
 - You should land on something like this
-  ![login.png](images/.png)
+
+  ![login.png](images/02.png)
 
 - The login page source code seems doesn't give us any lead
 - So we will create an account to proceed further
-  ![create account](images/.png)
+  
+  ![create account](images/03.png)
+
 - We can now login
-  ![welcome](images/.png)
+  
+  ![welcome](images/04.png)
 
 ## Inspection
 - The website allows us to enter any link in the Blog link form
 - On submission it creates an hyperlink when clicked opens a new tab
 - That's where we got something
-   ![bingo](images/.png)
+  
+   ![bingo](images/05.png)
+
 - The website is vulnerable to Tab nabbing.
   - What is tab nabbing?
     - imagine you're reading an interesting article on a website, and within this article, there's a link that catches your eye.
@@ -98,7 +104,9 @@ Nmap done: 1 IP address (1 host up) scanned in 6.43 seconds
 
 ## Attack
 - Provide in the victim form the link pointing to your fake page in this fashion: `http://yourIpAddress:serverPort/submit.html`
-   ![submit link](images/.png)
+  
+   ![submit link](images/06.png)
+
 - inspect your listener and after a few seconds
   ```
   ┌──(kali㉿kali)-[~]
@@ -261,6 +269,8 @@ User adrian may run the following commands on napping:
 - it appears that adrian can run vim with sudo priviledges
 - which means that we can attempt to invoke Vim with elevated privileges using sudo, and then execute a shell command (/bin/sh) from within Vim.
 - `sudo /usr/bin/vim -c ':!/bin/sh'`
-     ![congrats](images/.png)
+  
+     ![congrats](images/07.png)
+
 - Finally we can now access the root flag located in `cd /root`
 # THE END
