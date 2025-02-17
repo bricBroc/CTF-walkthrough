@@ -3,3 +3,4 @@
 - I will update regularly the list.
 
 - [Vulnhub](https://github.com/bricBroc/CTF-walkthrough/tree/main/Vulnhub.com)
+- [Wargames](https://github.com/bricBroc/CTF-walkthrough/tree/main/Wargames)
